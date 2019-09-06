@@ -1,5 +1,40 @@
 # django developer portfolio setup
 
+### pipenv setup
+``bash
+pip3 install pipenv
+cd ~/Desktop
+mkdir django-project
+cd django-project
+
+#check python versions
+python3 --version
+
+#setup virtual enviornment
+pipenv --three
+#or:
+pipenv --python 3.6
+
+#enter virtual enviornment
+pipenv shell
+pipenv install django='1.11.*'
+```
+
+### extra pipenv
+```bash
+#only install dependency for dev
+pipenv install pytest --dev
+
+#lock dependencies
+pipenv lock
+
+#prod install
+pipenv install --ignore-pipfile
+
+#dev install
+pipenv install --dev
+```
+
 ### Dev environment setup:
 ```bash
 #in project directory:
