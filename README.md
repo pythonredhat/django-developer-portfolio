@@ -1,7 +1,7 @@
 # django developer portfolio setup
 
 ### pipenv setup
-``bash
+```bash
 pip3 install pipenv
 cd ~/Desktop
 mkdir django-project
