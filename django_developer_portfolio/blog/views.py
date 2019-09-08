@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from blog.models import Post
-from . import forms
+from blog.models import Post, Comment
+from .forms import CommentForm
 
 def blog_index(request):
-    posts = Post.object.all().order_by('-created_on')
+    posts = Post.objects.all().order_by('-created_on')
     context = {
         "posts": posts
     }
@@ -12,7 +12,7 @@ def blog_index(request):
 
 def blog_category(request, category):
     posts = Post.objects.filter(
-        categories__name__contains=category).order_by('--created_on')
+        categories__name__contains=category).order_by('-created_on')
     context = {
         "category": category,
         "posts": posts
@@ -40,4 +40,4 @@ def blog_detail(request, pk):
         "form": form
     }
 
-    return render(request, "blog_detail.html", context)
+    return render(request, "post_detail.html", context)
