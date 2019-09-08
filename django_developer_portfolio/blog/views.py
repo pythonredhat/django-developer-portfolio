@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from blog.models import Post
-from . import forms
+from blog.models import Post, Comment
+from .forms import CommentForm
 
 def blog_index(request):
     posts = Post.objects.all().order_by('-created_on')
@@ -40,4 +40,4 @@ def blog_detail(request, pk):
         "form": form
     }
 
-    return render(request, "blog_detail.html", context)
+    return render(request, "post_detail.html", context)
