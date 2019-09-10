@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 django = "*"
 djangorestframework = "*"
+semantic-version = "*"
 
 [requires]
 python_version = "3.7"
