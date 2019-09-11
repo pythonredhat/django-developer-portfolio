@@ -4,8 +4,8 @@ from . import views
 urlpatterns = [
     url(
         r'^api/v1/version_lord/(?P<pk>[0-9]+)$',
-        views.update_version,
-        name='update_version'
+        views.get_delete_update_version,
+        name='get_delete_update_version'
     ),
     url(
         r'^api/v1/version_lord/$',
