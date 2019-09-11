@@ -7,7 +7,7 @@ from .models import Version
 from .serializers import VersionSerializer
 
 @api_view(['PUT'])
-def updated_version(request, pk):
+def update_version(request, pk):
     try:
         version = Version.objects.get(pk=pk)
     except Version.DoesNotExist:
