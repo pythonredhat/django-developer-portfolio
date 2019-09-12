@@ -186,3 +186,8 @@ Active
 
 ### docker, postgres, django setup
 https://wsvincent.com/django-docker-postgresql/
+
+### docker build procedures
+```
+docker build . -t localhub/versionlord:0.1.0
+```
