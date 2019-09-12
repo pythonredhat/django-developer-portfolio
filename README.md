@@ -165,3 +165,5 @@ https://realpython.com/get-started-with-django-1/
 ### gitlab cicd intregration steps
 https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/github_integration.html
 
+### docker, postgres, django setup
+https://wsvincent.com/django-docker-postgresql/
