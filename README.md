@@ -165,5 +165,24 @@ https://realpython.com/get-started-with-django-1/
 ### gitlab cicd intregration steps
 https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/github_integration.html
 
+when setting up in github webhooks of repo:
+```
+Payload URL:
+https://gitlab.com/api/v4/projects/<NAMESPACE>%2F<PROJECTNAME>/mirror/pull?private_token=<PERSONALACCESSTOKEN>
+
+Content Type: application/json
+
+Secret: (leave empty)
+
+SSL verification: Enable SSL verification
+
+Which events would you like to trigger this webhook?
+Just the push event
+
+Active
+```
+
+
+
 ### docker, postgres, django setup
 https://wsvincent.com/django-docker-postgresql/
