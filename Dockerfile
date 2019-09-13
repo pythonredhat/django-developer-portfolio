@@ -14,7 +14,7 @@ ENV PYTHONBUFFERED 1
 RUN pip install --upgrade pip
 RUN pip install pipenv
 COPY ./Pipfile /usr/src/app/Pipfile
-RUN pipenv install --system --skip-lock --system --dev
+RUN pipenv install --system --skip-lock --dev
 
 #copy project
 COPY . /usr/src/app 
