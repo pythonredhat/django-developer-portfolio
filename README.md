@@ -213,3 +213,17 @@ https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#
 
 ### dockerize and add to gitlab cicd
 https://testdriven.io/blog/deploying-django-to-digitalocean-with-docker-and-gitlab/
+
+### docker postgres verification procedure
+```
+#connect to db
+docker-compose exec db psql --username=hello_django --dbname=hello_django_dev
+#list databases
+\l
+#connect to database
+\c hello_django_dev;
+#describe tables in database
+\dt 
+#describe schema of table
+\d version_lord_version
+```
