@@ -26,7 +26,7 @@ SECRET_KEY = 'cmncrv*p)v75d_8x3)dmwqyowt)1-htw@8f6%(3u6j0u*!_or&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.56.101']
 
 
 # Application definition
