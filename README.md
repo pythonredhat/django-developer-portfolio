@@ -204,3 +204,9 @@ sudo systemctl enable postgresql-9.6
 ```
 resource: https://www.linode.com/docs/databases/postgresql/how-to-install-postgresql-relational-databases-on-centos-7/
 
+
+### dockerize django and add postgres,gunicorn,nginx
+https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#gunicorn
+
+### dockerize and add to gitlab cicd
+https://testdriven.io/blog/deploying-django-to-digitalocean-with-docker-and-gitlab/
