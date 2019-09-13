@@ -187,9 +187,12 @@ Active
 ### docker, postgres, django setup
 https://wsvincent.com/django-docker-postgresql/
 
-### docker build procedures
+### docker build and run procedures
 ```
-docker build . -t localhub/versionlord:0.1.0
+#build image
+docker-compose build
+#launch daemon
+docker-compose up -d
 ```
 
 ### postgresql centos7 install procedure from Postgres repos
