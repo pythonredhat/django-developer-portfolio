@@ -191,3 +191,16 @@ https://wsvincent.com/django-docker-postgresql/
 ```
 docker build . -t localhub/versionlord:0.1.0
 ```
+
+### postgresql centos7 install procedure from Postgres repos
+```
+wget https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
+yum install pgdg-centos96-9.6-3.noarch.rpm epel-release
+yum update
+yum install postgresql96-server postgresql96-contrib
+/usr/pgsql-9.6/bin/postgresql96-setup initdb
+systemctl start postgresql-9.6
+sudo systemctl enable postgresql-9.6
+```
+resource: https://www.linode.com/docs/databases/postgresql/how-to-install-postgresql-relational-databases-on-centos-7/
+
