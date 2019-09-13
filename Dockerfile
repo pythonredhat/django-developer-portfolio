@@ -14,7 +14,7 @@ ENV PYTHONBUFFERED 1
 RUN pip install --upgrade pip
 RUN pip install pipenv
 COPY ./Pipfile /usr/src/app/Pipfile
-#need to explain below command, took out --dev
+#need to explain below command, took out --dev as build fails with pylint
 #pipenv system flag means install software onto os, not a virtualenv
 #skip-lock means skip-lock file, it would be a dev install
 RUN pipenv install --system --skip-lock
