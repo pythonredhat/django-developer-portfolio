@@ -227,3 +227,12 @@ docker-compose exec db psql --username=hello_django --dbname=hello_django_dev
 #describe schema of table
 \d version_lord_version
 ```
+
+### current build procedures for Docker as of 9/13
+```
+#build web server and database
+docker-compose up -d --build
+#migrate database
+docker-compose exec web python ./django_developer_portfolio/manage.py migrate --noinput
+#run through postgres verification procedures above to ensure database has populated
+```
