@@ -8,6 +8,6 @@ services:
       - ./django-developer-portfolio/:/usr/src/app
     ports:
       - 8000:8000
-    enviornment:
+    environment:
       - DEBUG=1
       - SECRET_KEY=foo
