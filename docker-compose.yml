@@ -17,6 +17,7 @@ services:
       - SQL_PASSWORD=hello_django
       - SQL_HOST=db
       - SQL_PORT=5432
+      - DATABASE=postgres
     depends_on:
       - db
   db:
