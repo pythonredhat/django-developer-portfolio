@@ -15,6 +15,8 @@ RUN pip install --upgrade pip
 RUN pip install pipenv
 COPY ./Pipfile /usr/src/app/Pipfile
 #need to explain below command, took out --dev
+#pipenv system flag means install software onto os, not a virtualenv
+#skip-lock means skip-lock file, it would be a dev install
 RUN pipenv install --system --skip-lock
 
 #copy project
