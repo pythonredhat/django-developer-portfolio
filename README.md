@@ -226,6 +226,7 @@ docker-compose exec db psql --username=hello_django --dbname=hello_django_dev
 \dt 
 #describe schema of table
 \d version_lord_version
+docker volume inspect django-developer-portfolio_postgres_data
 ```
 
 ### current build procedures for Docker as of 9/13
