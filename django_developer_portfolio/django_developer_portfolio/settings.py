@@ -21,11 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'cmncrv*p)v75d_8x3)dmwqyowt)1-htw@8f6%(3u6j0u*!_or&'
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = int(os.environ.get('DEBUG', default=0))
 DEBUG = True
-
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.56.101']
 
 
 # Application definition
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'django_developer_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["django_developer_portfolio/templates/"],
+        'DIRS': ["django_developer_portfolio/templates/", "django_developer_portfolio/django_developer_portfolio/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

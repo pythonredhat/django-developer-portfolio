@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  web:
+    build: ./
+    command: python /usr/src/app/django_developer_portfolio/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8000:8000
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=foo

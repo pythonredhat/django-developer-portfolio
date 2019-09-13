@@ -187,9 +187,12 @@ Active
 ### docker, postgres, django setup
 https://wsvincent.com/django-docker-postgresql/
 
-### docker build procedures
+### docker build and run procedures
 ```
-docker build . -t localhub/versionlord:0.1.0
+#build image
+docker-compose build
+#launch daemon
+docker-compose up -d
 ```
 
 ### postgresql centos7 install procedure from Postgres repos
@@ -204,3 +207,9 @@ sudo systemctl enable postgresql-9.6
 ```
 resource: https://www.linode.com/docs/databases/postgresql/how-to-install-postgresql-relational-databases-on-centos-7/
 
+
+### dockerize django and add postgres,gunicorn,nginx
+https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#gunicorn
+
+### dockerize and add to gitlab cicd
+https://testdriven.io/blog/deploying-django-to-digitalocean-with-docker-and-gitlab/
