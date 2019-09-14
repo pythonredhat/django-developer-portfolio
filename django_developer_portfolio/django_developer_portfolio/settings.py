@@ -24,8 +24,8 @@ SECRET_KEY = 'cmncrv*p)v75d_8x3)dmwqyowt)1-htw@8f6%(3u6j0u*!_or&'
 #SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = int(os.environ.get('DEBUG', default=0))
-DEBUG = True
+DEBUG = int(os.environ.get('DEBUG', default=1))
+#DEBUG = True
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.56.101']
 
