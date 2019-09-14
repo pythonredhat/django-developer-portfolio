@@ -19,8 +19,8 @@ ENV PYTHONBUFFERED 1
 #    && apk del build-deps
 
 #install dependencies
-RUN pip install --upgrade pip
-RUN pip install pipenv
+RUN pip3.5 install --upgrade pip
+RUN pip3.5 install pipenv
 COPY ./Pipfile /usr/src/app/Pipfile
 #need to explain below command, took out --dev as build fails with pylint
 #pipenv system flag means install software onto os, not a virtualenv
