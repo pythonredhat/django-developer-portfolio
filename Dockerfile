@@ -1,6 +1,6 @@
 #pull base image
 #FROM python:3.7.4-alpine
-FROM python:3.7.4-buster
+FROM centos/python-35-centos7:latest
 
 #set working directory
 WORKDIR /usr/src/app
@@ -17,7 +17,7 @@ ENV PYTHONBUFFERED 1
 #    && apk add postgresql-dev \
 #    && pip install psycopg2 \
 #    && apk del build-deps
-RUN apt-get install netcat
+RUN yum install nmap -y
 
 #install dependencies
 RUN pip install --upgrade pip
