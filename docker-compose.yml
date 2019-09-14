@@ -18,6 +18,7 @@ services:
       - SQL_HOST=db
       - SQL_PORT=5432
       - DATABASE=postgres
+      - ENABLE_PIPENV=true
     depends_on:
       - db
   db:
