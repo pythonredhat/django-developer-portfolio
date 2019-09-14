@@ -17,7 +17,6 @@ ENV PYTHONBUFFERED 1
 #    && apk add postgresql-dev \
 #    && pip install psycopg2 \
 #    && apk del build-deps
-RUN sudo yum install nmap -y
 
 #install dependencies
 RUN pip install --upgrade pip
