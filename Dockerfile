@@ -21,6 +21,7 @@ ENV PYTHONBUFFERED 1
 
 #install dependencies
 RUN pip install --upgrade pip
+RUN pip install psycopg2
 RUN pip install pipenv
 COPY ./Pipfile /usr/src/app/Pipfile
 #need to explain below command, took out --dev as build fails with pylint

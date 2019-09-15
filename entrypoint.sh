@@ -6,14 +6,22 @@ set -e
 #all env variables inherited from docker-compose
 #wait for database to come up
 if [ "$DATABASE" = "postgres" ]
-then 
+then
   echo "Waiting for postgres..."
-  while ! nmap $SQL_HOST -p $SQL_PORT; do
-  #while ! nc -z $SQL_HOST $SQL_PORT; do
+  timeout 5 bash -c 'cat < /dev/null > /dev/tcp/$SQLHOST/$SQL_PORT'; echo $?
+  if [ $? -eq 1 ]
+  then
     sleep 0.1
-  done
+  else
+    echo "PostgesSQL started"
+  fi
+  #while ! echo > /dev/tcp/$SQL_HOST/$SQL_PORT && echo "Port is open"; do
+  #while ! nmap $SQL_HOST -p $SQL_PORT; do
+  #while ! nc -z $SQL_HOST $SQL_PORT; do
+  #  sleep 0.1
+  #done
 
-  echo "PostgreSQL started"
+  #echo "PostgreSQL started"
 fi
 
 #reset database
