@@ -8,7 +8,7 @@ set -e
 if [ "$DATABASE" = "postgres" ]
 then 
   echo "Waiting for postgres..."
-  while ! curl $SQL_HOST:$SQL_PORT; do
+  while ! nmap $SQL_HOST -p $SQL_PORT; do
   #while ! nc -z $SQL_HOST $SQL_PORT; do
     sleep 0.1
   done

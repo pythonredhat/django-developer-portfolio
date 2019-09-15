@@ -237,3 +237,6 @@ docker-compose up -d --build
 docker-compose exec web python ./django_developer_portfolio/manage.py migrate --noinput
 #run through postgres verification procedures above to ensure database has populated
 ```
+
+### test connection methods
+http://fibrevillage.com/sysadmin/80-quick-ways-to-test-remote-machine-port-availability
