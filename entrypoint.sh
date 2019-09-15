@@ -8,20 +8,16 @@ set -e
 if [ "$DATABASE" = "postgres" ]
 then
   echo "Waiting for postgres..."
-  timeout 5 bash -c 'cat < /dev/null > /dev/tcp/$SQLHOST/$SQL_PORT'; echo $?
-  if [ $? -eq 1 ]
-  then
+  while ! timeout 5 bash -c 'cat < /dev/null > /dev/tcp/$SQL_HOST/$SQL_PORT'; do
     sleep 0.1
-  else
-    echo "PostgesSQL started"
-  fi
+  done
   #while ! echo > /dev/tcp/$SQL_HOST/$SQL_PORT && echo "Port is open"; do
   #while ! nmap $SQL_HOST -p $SQL_PORT; do
   #while ! nc -z $SQL_HOST $SQL_PORT; do
   #  sleep 0.1
   #done
 
-  #echo "PostgreSQL started"
+  echo "PostgreSQL started"
 fi
 
 #reset database
