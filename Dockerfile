@@ -11,7 +11,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 #ensure console output looks familiar, not buffered by docker
 ENV PYTHONBUFFERED 1
 
-RUN apt-get install -y net-tools
+RUN apt-get update && apt-get install -y netcat
 #install psycopg2
 #RUN apk update \
 #    && apk add --virtual build-deps gcc python3-dev musl-dev \
