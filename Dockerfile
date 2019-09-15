@@ -1,6 +1,6 @@
 #pull base image
 #FROM python:3.7.4-alpine
-FROM centos/python-35-centos7:latest
+FROM python:3.7.4-slim-buster
 
 #set working directory
 WORKDIR /usr/src/app
@@ -11,6 +11,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 #ensure console output looks familiar, not buffered by docker
 ENV PYTHONBUFFERED 1
 
+RUN apt-get install -y net-tools
 #install psycopg2
 #RUN apk update \
 #    && apk add --virtual build-deps gcc python3-dev musl-dev \
@@ -19,8 +20,8 @@ ENV PYTHONBUFFERED 1
 #    && apk del build-deps
 
 #install dependencies
-RUN pip3.5 install --upgrade pip
-RUN pip3.5 install pipenv
+RUN pip install --upgrade pip
+RUN pip install pipenv
 COPY ./Pipfile /usr/src/app/Pipfile
 #need to explain below command, took out --dev as build fails with pylint
 #pipenv system flag means install software onto os, not a virtualenv
