@@ -24,6 +24,8 @@ fi
 python ./django_developer_portfolio/manage.py flush --no-input
 #migrate database
 python ./django_developer_portfolio/manage.py migrate
+#load fixtures for dev environment
+python ./django_developer_portfolio/manage.py loaddata
 
 #It does nothing except pass control back to whatever process is ran in your CMD instruction in your Dockerfile. That’s what exec "$@" does.
 exec "$@"
