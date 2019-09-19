@@ -1,0 +1,32 @@
+[
+    {
+        "model": "blog.Category",
+        "pk": 1,
+        "fields": {
+            "name": "web"
+        }
+    },
+    {
+        "model": "blog.Category",
+        "pk": 2,
+        "fields": {
+            "name": "big data"
+        }
+    },
+    {
+        "model": "blog.Post",
+        "pk": 1,
+        "fields": {
+            "title": "Web post test",
+            "body": "A fake blog post for the web."
+        }
+    },
+    {
+        "model": "blog.Post",
+        "pk": 2,
+        "fields": {
+            "title": "Big data post test",
+            "body": "A fake blog post for big data."
+        }
+    }
+]
