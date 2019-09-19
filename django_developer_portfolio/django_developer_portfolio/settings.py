@@ -142,3 +142,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [],
     'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
+
+FIXTURE_DIRS = (
+    os.path.join(BASE_DIR, 'projects', 'fixtures')
+)
