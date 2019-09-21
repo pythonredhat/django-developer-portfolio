@@ -18,7 +18,10 @@
         "pk": 1,
         "fields": {
             "title": "Web post test",
-            "body": "A fake blog post for the web."
+            "body": "A fake blog post for the web.",
+            "created_on": "2019-10-20T15:58:44.767594-06:00",
+            "last_modified": "2019-10-20T15:58:44.767594-06:00",
+            "categories": "web"
         }
     },
     {
@@ -26,7 +29,10 @@
         "pk": 2,
         "fields": {
             "title": "Big data post test",
-            "body": "A fake blog post for big data."
+            "body": "A fake blog post for big data.",
+            "created_on": "2019-10-20T15:58:44.767594-06:00",
+            "last_modified": "2019-10-20T15:58:44.767594-06:00",
+            "categories": "big data"
         }
     }
 ]
