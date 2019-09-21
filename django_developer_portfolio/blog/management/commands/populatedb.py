@@ -14,13 +14,13 @@ c2 = Category(
 p1 = Post(
     title="Web post test",
     body="A fake blog post for the web",
-    categories="web"
+    #categories="web"
 )
 
 p2 = Post(
     title="Big data post test",
     body="A fake blog post for big data",
-    categories="big data"
+    #categories="big data"
 )
 
 if __name__ == "__main__":
