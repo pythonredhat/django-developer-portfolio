@@ -1,4 +1,3 @@
-from django_developer_portfolio import settings
 from blog.models import Category
 from blog.models import Post
 from django.contrib.auth.models import User
