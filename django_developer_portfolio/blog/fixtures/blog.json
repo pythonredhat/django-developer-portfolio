@@ -19,8 +19,8 @@
         "fields": {
             "title": "Web post test",
             "body": "A fake blog post for the web.",
-            "created_on": "2019-10-20T15:58:44.767594-06:00",
-            "last_modified": "2019-10-20T15:58:44.767594-06:00",
+            "created_on": "2013-03-16T17:41:28+00:00",
+            "last_modified": "2013-03-16T17:41:28+00:00",
             "categories": "web"
         }
     },
@@ -30,8 +30,8 @@
         "fields": {
             "title": "Big data post test",
             "body": "A fake blog post for big data.",
-            "created_on": "2019-10-20T15:58:44.767594-06:00",
-            "last_modified": "2019-10-20T15:58:44.767594-06:00",
+            "created_on": "2013-03-16T17:41:28+00:00",
+            "last_modified": "2013-03-16T17:41:28+00:00",
             "categories": "big data"
         }
     }
