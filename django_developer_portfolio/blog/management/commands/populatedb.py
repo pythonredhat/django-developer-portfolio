@@ -1,7 +1,6 @@
 from blog.models import Category
 from blog.models import Post
-from django.contrib.auth.models import User
-from django.core.management.base import BaseCommand, CommandError
+#from django.contrib.auth.models import User
 
 c1 = Category(
     name='web'
