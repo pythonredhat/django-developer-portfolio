@@ -1,28 +1,30 @@
 from blog.models import Category
 from blog.models import Post
-#from django.contrib.auth.models import User
+from django.core.management.base import BaseCommand
+from django.contrib.auth.models import User
 
-c1 = Category(
-    name='web'
-)
 
-c2 = Category(
-    name='big data'
-)
+class Command(BaseCommand): 
+    c1 = Category(
+       name='web'
+    )
 
-p1 = Post(
-    title="Web post test",
-    body="A fake blog post for the web",
-    #categories="web"
-)
+    c2 = Category(
+       name='big data'
+    )
 
-p2 = Post(
-    title="Big data post test",
-    body="A fake blog post for big data",
-    #categories="big data"
-)
+    p1 = Post(
+       title="Web post test",
+       body="A fake blog post for the web",
+       #categories="web"
+    )
 
-if __name__ == "__main__":
+    p2 = Post(
+       title="Big data post test",
+       body="A fake blog post for big data",
+       #categories="big data"
+    )
+
     c1.save()
     c2.save()
     p1.save()
