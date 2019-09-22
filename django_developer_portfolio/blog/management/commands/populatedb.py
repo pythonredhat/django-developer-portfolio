@@ -28,8 +28,8 @@ class Command(BaseCommand):
         #categories="big data"
         )
            
-       c1.save()
-       c2.save()
-       p1.save()
-       p2.save()
+      c1.save()
+      c2.save()
+      p1.save()
+      p2.save()
 
