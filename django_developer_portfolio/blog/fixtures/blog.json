@@ -1,0 +1,38 @@
+[
+    {
+        "model": "blog.Category",
+        "pk": 1,
+        "fields": {
+            "name": "web"
+        }
+    },
+    {
+        "model": "blog.Category",
+        "pk": 2,
+        "fields": {
+            "name": "big data"
+        }
+    },
+    {
+        "model": "blog.Post",
+        "pk": 1,
+        "fields": {
+            "title": "Web post test",
+            "body": "A fake blog post for the web.",
+            "created_on": "2013-03-16 17:41:28",
+            "last_modified": "2013-03-16 17:41:28",
+            "categories": "web"
+        }
+    },
+    {
+        "model": "blog.Post",
+        "pk": 2,
+        "fields": {
+            "title": "Big data post test",
+            "body": "A fake blog post for big data.",
+            "created_on": "2013-03-16 17:41:28",
+            "last_modified": "2013-03-16 17:41:28",
+            "categories": "big data"
+        }
+    }
+]

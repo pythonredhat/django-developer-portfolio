@@ -188,7 +188,7 @@ Active
 https://wsvincent.com/django-docker-postgresql/
 
 ### docker build and run procedures
-```
+```bash
 #build image
 docker-compose build
 #launch daemon
@@ -196,7 +196,7 @@ docker-compose up -d
 ```
 
 ### postgresql centos7 install procedure from Postgres repos
-```
+```bash
 wget https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
 yum install pgdg-centos96-9.6-3.noarch.rpm epel-release
 yum update
@@ -213,3 +213,35 @@ https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#
 
 ### dockerize and add to gitlab cicd
 https://testdriven.io/blog/deploying-django-to-digitalocean-with-docker-and-gitlab/
+
+### docker postgres verification procedure
+```bash
+#connect to db
+docker-compose exec db psql --username=hello_django --dbname=hello_django_dev
+#list databases
+\l
+#connect to database
+\c hello_django_dev;
+#describe tables in database
+\dt 
+#describe schema of table
+\d version_lord_version
+docker volume inspect django-developer-portfolio_postgres_data
+```
+
+### current build procedures for Docker as of 9/13
+```bash
+#build web server and database
+docker-compose up -d --build
+#migrate database
+docker-compose exec web python ./django_developer_portfolio/manage.py migrate --noinput
+#run through postgres verification procedures above to ensure database has populated
+```
+
+### test connection methods
+http://fibrevillage.com/sysadmin/80-quick-ways-to-test-remote-machine-port-availability
+
+### go inside container and work
+```bash
+docker exec -it django-developer-portfolio_web_1 bash
+```

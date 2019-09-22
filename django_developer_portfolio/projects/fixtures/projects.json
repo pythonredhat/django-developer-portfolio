@@ -1,0 +1,29 @@
+[
+    {
+        "model": "projects.Project",
+        "pk": 1,
+        "fields": {
+            "title": "Django Web Development",
+            "description": "A website developed with the Django framework.",
+            "image": "img/project1.png"
+        }
+    },
+    {
+        "model": "projects.Project",
+        "pk": 2,
+        "fields": {
+            "title": "Python Tools",
+            "description": "Python tools for devops and system administration.",
+            "image": "img/project2.png"
+        }
+    },
+    {
+        "model": "projects.Project",
+        "pk": 3,
+        "fields": {
+            "title": "Bash Tools",
+            "description": "Bash tools for devops and system administration.",
+            "image": "img/project3.png"
+        }
+    }
+]
