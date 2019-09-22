@@ -27,7 +27,7 @@ class Command(BaseCommand):
        #categories="big data"
     )
 
-    def handle(self, **args, **options):
+    def handle(self, *args, **options):
        c1.save()
        c2.save()
        p1.save()
