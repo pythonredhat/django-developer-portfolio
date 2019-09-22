@@ -21,7 +21,7 @@ class Command(BaseCommand):
         body="A fake blog post for the web",
         #categories="web"
         )
-
+    
       p2 = Post(
         title="Big data post test",
         body="A fake blog post for big data",
