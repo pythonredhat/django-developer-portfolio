@@ -1,10 +1,12 @@
 from blog.models import Category
 from blog.models import Post
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 from django.contrib.auth.models import User
 
 
 class Command(BaseCommand): 
+    help = 'Populates the postgresql database with fake blog data'
+    
     c1 = Category(
        name='web'
     )
@@ -25,8 +27,9 @@ class Command(BaseCommand):
        #categories="big data"
     )
 
-    c1.save()
-    c2.save()
-    p1.save()
-    p2.save()
+    def handle(self, **args, **options):
+       c1.save()
+       c2.save()
+       p1.save()
+       p2.save()
 
