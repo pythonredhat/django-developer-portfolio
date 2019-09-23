@@ -6,7 +6,7 @@ from rest_framework import status
 from .models import Version
 from .serializers import VersionSerializer
 
-@api_view(['GET', 'DELETE', 'PUT'])
+@api_view(['GET', 'UPDATE', 'DELETE'])
 def get_delete_update_version(request, pk):
     try:
         version = Version.objects.get(pk=pk)
@@ -17,17 +17,19 @@ def get_delete_update_version(request, pk):
     if request.method == 'GET':
         return Response({})
     #delete a single version
-    elif request.method == 'DELETE':
+    elif request.method == 'UPDATE':
         return Response({})
     #update details of a single version
-    elif request.method == 'PUT':
+    elif request.method == 'DELETE':
         return Response({})
 
 @api_view(['GET', 'POST'])
 def get_post_version(request):
     #get all versions
     if request.method == 'GET':
-        return Response({})
+        versions = Version.objects.all()
+        serializer = VersionSerializer(versions, many=True)
+        return Response(serializer.data)
     #insert a new version for a piece of software
     elif request.method == 'POST':
         return Response({})
