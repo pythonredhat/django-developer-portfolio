@@ -1,3 +1,7 @@
 from django.contrib import admin
+from version_lord.models import Version
 
-# Register your models here.
+class VersionAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Version, VersionAdmin)
