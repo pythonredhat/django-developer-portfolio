@@ -28,5 +28,5 @@ build:
     - docker-compose -f docker-compose.yml build
 
     #failed here
-    - docker push $IMAGE:django-developer-portfolio_web
-    - docker push $IMAGE:postgres
+    - docker push $IMAGE:latest
+    #- docker push $IMAGE:postgres
