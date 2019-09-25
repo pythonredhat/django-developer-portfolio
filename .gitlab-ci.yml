@@ -23,8 +23,8 @@ build:
     - chmod +x ./setup_env.sh
     - bash ./setup_env.sh
     - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
-    - #docker pull $IMAGE:web || true
-    - #docker pull $IMAGE:db
+    #- #docker pull $IMAGE:web || true
+    #- #docker pull $IMAGE:db
     - docker-compose -f docker-compose.yml build
     - docker tag django-developer-portfolio_web:latest $WEB_IMAGE:$CI_COMMIT_SHA
 
