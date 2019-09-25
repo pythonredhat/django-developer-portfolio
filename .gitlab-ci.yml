@@ -23,10 +23,15 @@ build:
     - chmod +x ./setup_env.sh
     - bash ./setup_env.sh
     - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
-    #- docker pull python:3.7.4-buster || true
-    #- docker pull postgres:11.5-alpine || true
+    - docker pull $IMAGE:web || true
+    - docker pull $IMAGE:db
     - docker-compose -f docker-compose.yml build
 
     #failed here
-    - docker push $IMAGE:latest
-    - docker push $IMAGE:postgres
+    - docker push $IMAGE:web
+    - docker push $IMAGE:db
+
+
+###notes
+# https://docs.gitlab.com/ee/ci/docker/using_docker_build.html
+#  tagging images: $CI_COMMIT_SHA
