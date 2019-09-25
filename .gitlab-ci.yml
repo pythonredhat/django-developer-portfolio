@@ -26,5 +26,7 @@ build:
     #- docker pull python:3.7.4-buster || true
     #- docker pull postgres:11.5-alpine || true
     - docker-compose -f docker-compose.yml build
-    - docker push $IMAGE:web
-    - docker push $IMAGE:db
+
+    #failed here
+    - docker push $IMAGE:django-developer-portfolio_web
+    - docker push $IMAGE:postgres
