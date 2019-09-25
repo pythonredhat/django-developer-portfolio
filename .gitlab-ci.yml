@@ -1,29 +1,31 @@
+images:
+  name: docker/compose:1.24.1
+  entrypoint: [""]
+
+services:
+  - docker:dind
+
 stages:
-  - test
-  - deploy
+  - build
 
-test:
-  stage: test
-  script: 
-  - pipenv install --ignore-pipfile
-  - python manage.py test
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
 
-staging:
-  stage: deploy
-  script: 
-  - apt-get update -qy
-  - apt-get install -y ruby-dev
-  - gem install dpl
-  - dpl --provider=heroku --app=gitlab-ci-python-test-staging --api-key=$HEROKU_STAGING_API_KEY
-  only:
-  - master
-
-master:
-  stage: deploy
-  script: 
-  - apt-get update -qy
-  - apt-get install -y ruby-dev
-  - gem install dpl
-  - dpl --provider=heroku --app=gitlab-ci-python-test-staging --api-key=$HEROKU_STAGING_API_KEY
-  only:
-  - tags
+build:
+  stage: build
+  before_script:
+    - export IMAGE=$CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME
+    - export WEB_IMAGE=$IMAGE:web
+    - export NGINX_IMAGE=$IMAGE:nginx
+  script:
+    - apk add --no-cache bash
+    - chmod +x ./setup_env.sh
+    - bash ./setup_env.sh
+    - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker pull $IMAGE:web || true
+    - docker pull $IMAGE:nginx || true
+    - docker-compose -f docker-compose.ci.yml build
+    - docker push $IMAGE:web
+    - docker push $IMAGE:nginx
+    
