@@ -1,4 +1,4 @@
-images:
+image:
   name: docker/compose:1.24.1
   entrypoint: [""]
 
