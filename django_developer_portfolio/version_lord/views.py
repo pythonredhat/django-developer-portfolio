@@ -15,7 +15,8 @@ def get_delete_update_version(request, pk):
 
     #get details of a single version
     if request.method == 'GET':
-        return Response({})
+        serializer = VersionSerializer(version)
+        return Response(serializer.data)
     #delete a single version
     elif request.method == 'UPDATE':
         return Response({})
