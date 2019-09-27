@@ -33,4 +33,12 @@ def get_post_version(request):
         return Response(serializer.data)
     #insert a new version for a piece of software
     elif request.method == 'POST':
-        return Response({})
+        data = {
+            'software': request.data.get('software'),
+            'current_version': request.data.get('current_version')
+        }
+        serializer = VersionSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
