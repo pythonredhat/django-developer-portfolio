@@ -49,3 +49,10 @@ def get_post_version(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+def version_lord_index(request):
+    versions = Version.objects.all()
+    context = {
+        'versions': versions
+    }
+    return render(request, 'version_lord_index.html', context)

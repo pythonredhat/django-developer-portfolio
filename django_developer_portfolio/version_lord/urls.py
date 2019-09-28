@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -11,5 +12,6 @@ urlpatterns = [
         r'^api/v1/version_lord/$',
         views.get_post_version,
         name='get_post_version'
-    )
+    ),
+    path("", views.version_lord_index, name="version_lord_index")
 ]
