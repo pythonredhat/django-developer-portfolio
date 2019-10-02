@@ -11,56 +11,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Kubernetes</td>
-        <td>1.15.1</td>
-        <td>6-12-2019</td>
-      </tr>
-      <tr>
-        <td>Grafana</td>
-        <td>2.3.1</td>
-        <td>5-11-2019</td>
-      </tr>
-      <tr>
-        <td>Nagios</td>
-        <td>4.0.1</td>
-        <td>8-10-2019</td>
-      </tr>
-      <tr>
-        <td>Docker</td>
-        <td>8.1.7</td>
-        <td>8-20-2019</td>
-      </tr>
-      <tr>
-        <td>Red Hat</td>
-        <td>8.0</td>
-        <td>9-07-2019</td>
-      </tr>
-      <tr>
-        <td>Prometheus</td>
-        <td>1.16.2</td>
-        <td>2-11-2019</td>
-      </tr>
-      <tr>
-        <td>Python</td>
-        <td>3.7.3</td>
-        <td>9-06-2019</td>
-      </tr>
-      <tr>
-        <td>Django</td>
-        <td>2.1.1</td>
-        <td>8-30-2019</td>
-      </tr>
-      <tr>
-        <td>Redis</td>
-        <td>8.0</td>
-        <td>9-07-2019</td>
-      </tr>
-      <tr>
-        <td>Puppet</td>
-        <td>1.6.0</td>
-        <td>9-15-2019</td>
-      </tr>
+    {% for version in versions %}   
+    <tr>
+        <td>{{ version.software }}</td>
+        <td>{{ version.current_version }}</td>
+        <td>{{ version.last_updated }}</td>
+    </tr>
+    {% endfor %}
     </tbody>
   </table>
   {% endblock %}
