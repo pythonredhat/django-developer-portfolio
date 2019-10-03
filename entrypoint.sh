@@ -27,7 +27,8 @@ python ./django_developer_portfolio/manage.py migrate
 #load fixtures for dev environment
 python ./django_developer_portfolio/manage.py loaddata ./django_developer_portfolio/projects/fixtures/projects.json
 #python ./django_developer_portfolio/manage.py loaddata ./django_developer_portfolio/blog/fixtures/blog.json
-python ./django_developer_portfolio/manage.py populatedb
+#python ./django_developer_portfolio/manage.py populatedb
+python ./django_developer_portfolio/manage.py add_fake_versions
 
 #It does nothing except pass control back to whatever process is ran in your CMD instruction in your Dockerfile. That’s what exec "$@" does.
 exec "$@"
