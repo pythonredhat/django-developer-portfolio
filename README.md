@@ -245,3 +245,14 @@ http://fibrevillage.com/sysadmin/80-quick-ways-to-test-remote-machine-port-avail
 ```bash
 docker exec -it django-developer-portfolio_web_1 bash
 ```
+
+### quick way to POST data to db via python shell
+```bash
+import requests
+import json
+weburl = 'http://localhost:8000/api/v1/version_lord/'
+data = {'current_version': '7.1.1', 'software': 'Red Hat Enterprise Linux 7'}
+payload = requests.post(url=weburl, data=json.dumps(data), headers={'Content-Type': 'application/json'})
+print (payload.status_code)
+print(payload.content)
+```
