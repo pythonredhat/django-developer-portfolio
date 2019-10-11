@@ -245,7 +245,10 @@ http://fibrevillage.com/sysadmin/80-quick-ways-to-test-remote-machine-port-avail
 ```bash
 docker exec -it django-developer-portfolio_web_1 bash
 ```
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 ### quick way to POST data to db via python shell
 ```bash
 import requests
