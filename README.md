@@ -256,3 +256,8 @@ payload = requests.post(url=weburl, data=json.dumps(data), headers={'Content-Typ
 print (payload.status_code)
 print(payload.content)
 ```
+
+### how gunicorn and nginx work together
+```bash
+https://vsupalov.com/gunicorn-and-nginx/
+```
