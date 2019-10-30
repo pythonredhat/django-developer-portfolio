@@ -5,7 +5,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.web
-    command: gunicorn ./django_developer_portfolio/django_developer_portfolio.wsgi --bind 0.0.0.0:8000
+    command: gunicorn /usr/src/app/django_developer_portfolio//django_developer_portfolio.wsgi --bind 0.0.0.0:8000
     volumes:
       - .:/usr/src/app
     ports:
