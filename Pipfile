@@ -10,6 +10,7 @@ pylint = "*"
 django = "*"
 djangorestframework = "*"
 semantic-version = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
