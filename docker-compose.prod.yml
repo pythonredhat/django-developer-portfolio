@@ -5,7 +5,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.web
-    command: gunicorn django_developer_portfolio.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn --chdir /usr/src/app/django_developer_portfolio --bind 0.0.0.0:8000 django_developer_portfolio.wsgi:application 
     volumes:
       - .:/usr/src/app
     ports:
