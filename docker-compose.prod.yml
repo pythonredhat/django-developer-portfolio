@@ -8,8 +8,8 @@ services:
     command: gunicorn --chdir /usr/src/app/django_developer_portfolio/ django_developer_portfolio.wsgi:application --bind 0.0.0.0:8000 
     volumes:
       - .:/usr/src/app
-    ports:
-      - 8000:8000
+    expose:
+      - 8000
     depends_on:
       - db
   db:
@@ -20,6 +20,12 @@ services:
       - POSTGRES_USER=hello_django
       - POSTGRES_PASSWORD=hello_django
       - POSTGRES_DB=hello_django_dev
+  nginx:
+    build: ./nginx
+    ports:
+      - 1337:80
+    depends_on:
+      - web
 
 volumes:
   postgres_data:
