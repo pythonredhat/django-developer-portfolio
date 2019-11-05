@@ -261,3 +261,12 @@ print(payload.content)
 ```bash
 https://vsupalov.com/gunicorn-and-nginx/
 ```
+
+
+
+
+nginx serving up files
+https://ruddra.com/posts/serve-static-files-by-nginx-from-django-using-docker/
+
+
+http://192.168.56.101:1337/projects/
