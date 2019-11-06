@@ -24,6 +24,8 @@ fi
 python ./django_developer_portfolio/manage.py flush --no-input
 #migrate database
 python ./django_developer_portfolio/manage.py migrate
+#serve static files
+python ./django_developer_portfolio/manage.py collectstatic --no-input --clear
 #load fake data via fixtures
 python ./django_developer_portfolio/manage.py loaddata ./django_developer_portfolio/projects/fixtures/projects.json
 #load fake data via management commands

@@ -261,3 +261,8 @@ print(payload.content)
 ```bash
 https://vsupalov.com/gunicorn-and-nginx/
 ```
+
+### how to serve static files with nginx, django, docker
+```bash
+https://ruddra.com/posts/serve-static-files-by-nginx-from-django-using-docker/
+```

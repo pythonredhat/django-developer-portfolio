@@ -8,6 +8,7 @@ services:
     command: gunicorn --chdir /usr/src/app/django_developer_portfolio/ django_developer_portfolio.wsgi:application --bind 0.0.0.0:8000 
     volumes:
       - .:/usr/src/app
+      - ./django_developer_portfolio/staticfiles:/usr/src/app/django_developer_portfolio/staticfiles
     expose:
       - 8000
     depends_on:
@@ -22,6 +23,9 @@ services:
       - POSTGRES_DB=hello_django_dev
   nginx:
     build: ./nginx
+    volumes:
+      - .:/usr/src/app
+      - ./django_developer_portfolio/staticfiles:/staticfiles
     ports:
       - 1337:80
     depends_on:
