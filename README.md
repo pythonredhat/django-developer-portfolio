@@ -262,13 +262,7 @@ print(payload.content)
 https://vsupalov.com/gunicorn-and-nginx/
 ```
 
-
-
-#################################################################
-
-using this as alternate config to testdriven.io:
-nginx serving up files
+### how to serve static files with nginx, django, docker
+```bash
 https://ruddra.com/posts/serve-static-files-by-nginx-from-django-using-docker/
-
-
-http://192.168.56.101:1337/projects/
+```
