@@ -264,7 +264,9 @@ https://vsupalov.com/gunicorn-and-nginx/
 
 
 
+#################################################################
 
+using this as alternate config to testdriven.io:
 nginx serving up files
 https://ruddra.com/posts/serve-static-files-by-nginx-from-django-using-docker/
 

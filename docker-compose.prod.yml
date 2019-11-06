@@ -24,6 +24,7 @@ services:
   nginx:
     build: ./nginx
     volumes:
+      - .:/usr/src/app
       - ./django_developer_portfolio/staticfiles:/staticfiles
     ports:
       - 1337:80
