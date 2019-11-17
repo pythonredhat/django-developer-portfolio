@@ -266,3 +266,13 @@ https://vsupalov.com/gunicorn-and-nginx/
 ```bash
 https://ruddra.com/posts/serve-static-files-by-nginx-from-django-using-docker/
 ```
+
+### integrate prometheus into django (DONE)
+```bash
+https://labs.meanpug.com/custom-application-metrics-with-django-prometheus-and-kubernetes/
+```
+
+### integrate wsgi,nginx monitoring into Django and then Kubernetes
+```bash
+https://www.apsl.net/blog/2018/10/01/using-prometheus-monitoring-django-applications-kubernetes/
+```
