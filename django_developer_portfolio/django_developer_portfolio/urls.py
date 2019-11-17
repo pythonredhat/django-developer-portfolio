@@ -23,4 +23,5 @@ urlpatterns = [
     path('blog/', include("blog.urls")),
     url(r'^', include('version_lord.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include ('django_prometheus.urls'))
 ]
